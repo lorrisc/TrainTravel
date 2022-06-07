@@ -1668,7 +1668,7 @@ footer article {
     margin: 0 20px;
 }
 
-/* #panierVide {
+#panierVide {
     background-color: rgb(255, 166, 0);
     height: 60px;
     width: 90%;
@@ -1680,7 +1680,7 @@ footer article {
     font-weight: 700;
     font-size: 17px;
     color: black;
-} */
+}
 
 
 /*RESPONSIVE*/
