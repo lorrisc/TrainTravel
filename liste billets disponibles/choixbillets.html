@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>TrainTravel</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="choixbilets.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="Titreprincipal"><a href="../index.html" id="traintravel">TrainTravel</a></h1>
+        <article id="bouttonheader">
+            <div id="inscription">
+                <p>S'inscrire</p>
+            </div>
+            <div id="deconnexion">
+                <p>Se déconnecter</p>
+            </div>
+            <!--<a href="userProfil.html">-->
+            <div id="connexion">
+                <p>Se connecter</p>
+            </div>
+            <!--</a>-->
+            <a href="../profil utilisateur/userProfil.html" id="profil">
+                <p>Profil</p>
+            </a>
+            <div id="panier">
+                <p>Panier</p>
+            </div>
+        </article>
+    </header>
+
+    <div id="fondcontraste">
+
+    </div>
+
+    <section id="ticketuserparts">
+        <div id="titreformulaire2" onclick='buttonrecherchertest()'>
+            <img src="../assets/icons/train.png" alt="icone train">
+            <p>Recherche</p>
+        </div>
+        <section id="formulairerecherche2">
+            <div id="titrelignedepartarrive">
+                <p>Départ</p>
+                <p> Arrivée</p>
+            </div>
+            <div id="lignedepartarrive">
+                <div id="garededepart">
+                    <img src="../assets/icons/train2.png" alt="icone train">
+                    <input list="cities" type="search" id="garedepart" name="garedepart" placeholder="Paris 7">
+                    <datalist id="cities">
+                        <option value="Paris">
+                        <option value="Marseille">
+                        <option value="Lyon">
+                        <option value="Toulouse">
+                        <option value="Strasbourg">
+                        <option value="Bordeaux">
+                        <option value="Lille">
+                        <option value="Rennes">
+                        <option value="Grenoble">
+                        <option value="Valence">
+                    </datalist>
+                </div>
+                <div id="garedarrivee">
+                    <img src="../assets/icons/train2.png" alt="icone train">
+                    <input list="cities" type="search" id="garearrivee" name="garearrivee" placeholder="Arras">
+                </div>
+            </div>
+            <div id="titrelignedatevoyageur">
+                <p class="datetrain">Départ</p>
+                <p class="datetrain">Horraire</p>
+                <p id="typevoyageur">Voyageur</p>
+            </div>
+            <div id="lignedatevoyageur">
+                <div id="datedepart">
+                    <img src="../assets/icons/calendar.png" alt="icone train">
+                    <input type="date" id="start" name="trip-start" min="2022-01-01" max="2030-01-01">
+                </div>
+                <div id="heuredepart">
+                    <img src="../assets/icons/calendar.png" alt="icone train">
+                    <input type="time" id="horraire" name="trip-start">
+                </div>
+                <a href="#popup" id="voyageur">
+                    <img src="../assets/icons/members.png" alt="icone train">
+                    <p>Ajouter un voyageur</p>
+                </a>
+            </div>
+            <a href="#" id="lignerecherche" onclick='GFG_click()'>
+                <img src="../assets/icons/search.png" alt="icone recherche">
+                <p>Rechercher</p>
+            </a>
+            <div id="alertSaisi">
+                <p>Veuillez saisir des informations corrects.</p>
+                <p>Nos services sont d'ores et déjà disponible dans les villes de : Paris, Marseille, Lyon, Toulouse,
+                    Strasbourg, Bordeaux, Lille, Rennes, Grenoble, Valence.</p>
+            </div>
+            <div id="alert0TrainDispo">
+                <p>Aucun train n'est disponible.</p>
+                <p>Réssayez avec des horaires plus souples, une autre date peut malheureusement être aussi la
+                    solution... À bientôt dans nos transports.</p>
+            </div>
+            <div id="serviceIndisponible">
+                <p>Nous sommes navrés nos services rencontrent des problèmes techniques.</p>
+                <p>Merci de ressayez ultérierement, à bientôt.</p>
+            </div>
+        </section>
+
+
+    </section>
+
+
+    <!--POPUP NOMBRE DE VOYAGEUR-->
+    <div id="popup" class="overlay">
+        <div id="nbrpassager" class="popup">
+            <h3>Précisez vos voyageurs :</h3>
+            <article id="0-3" class="ligneaddpassager">
+                <p class="typepassager">0 - 3 ans</p>
+                <article class="modifiernbr">
+                    <p id="moins0-3" class="moins">-</p>
+                    <p id="0-3value" class="valuenbrpassage">0</p>
+                    <p id="plus0-3" class="plus">+</p>
+                </article>
+            </article>
+            <article id="4-15" class="ligneaddpassager">
+                <p class="typepassager">4 - 15 ans</p>
+                <article class="modifiernbr">
+                    <p id="moins4-15" class="moins">-</p>
+                    <p id="4-15value" class="valuenbrpassage">0</p>
+                    <p id="plus4-15" class="plus">+</p>
+                </article>
+            </article>
+            <article id="16-29" class="ligneaddpassager">
+                <p class="typepassager">16 - 29 ans</p>
+                <article class="modifiernbr">
+                    <p id="moins16-29" class="moins">-</p>
+                    <p id="16-29value" class="valuenbrpassage">0</p>
+                    <p id="plus16-29" class="plus">+</p>
+                </article>
+            </article>
+            <article id="30-59" class="ligneaddpassager">
+                <p class="typepassager">30 - 59 ans</p>
+                <article class="modifiernbr">
+                    <p id="moins30-59" class="moins">-</p>
+                    <p id="30-59value" class="valuenbrpassage">0</p>
+                    <p id="plus30-59" class="plus">+</p>
+
+                </article>
+            </article>
+            <article id="60+" class="ligneaddpassager">
+                <p class="typepassager">60 ans et plus</p>
+                <article class="modifiernbr">
+                    <p id="moins60+" class="moins">-</p>
+                    <p id="60+value" class="valuenbrpassage">0</p>
+                    <p id="plus60+" class="plus">+</p>
+                </article>
+            </article>
+            <div id="boutonpopupvoyageur">
+                <a href="#" id="boutoncancelpassager">
+                    <p>Annuler</p>
+                </a>
+                <a href="#" id="boutonvalidationpassager">
+                    <p>Valider</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--BOUTON TOP CORNER DROIT INSCRIPTION CONNEXION PANIER-->
+    <article id="flottantlogin" class="loginBillets">
+        <h2>Connexion à mon compte</h2>
+        <div id="elements">
+            <p class="small" id="champobligatoire">*Champs obligatoires</p>
+            <div class="inputlog margebottomappliq">
+                <input type="email" id="emaillogin" name="courrieledit" placeholder="Adresse e-mail*">
+            </div>
+            <div class="inputlog margebottomappliq">
+                <input type="password" id="passwordlogin" name="courrieledit" placeholder="Mot de passe*">
+            </div>
+
+            <div class="margebottomappliq" id="bottominput">
+                <div id="sesouvenirlog">
+                    <input type="checkbox" id="savepass" name="savepass" checked>
+                    <label for="savepass">Se souvenir de moi</label>
+                </div>
+                <p id="forgetpassword" class="small">Mot de passe oublié</p>
+            </div>
+            <p id="createaccountlink" class="small2">Créer un compte TrainTravel</p>
+            <div id="loginnonetabli">
+                <p>Nom d'utilisateur ou mot de passe incorrect.</p>
+            </div>
+            <div id="buttonpopup">
+                <div id="cancel">
+                    <p>Annuler</p>
+                </div>
+
+
+                <a href="#" id="connexionpopup">
+                    <div id="connexionpopupdiv">
+                        <p>Me connecter</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <article id="flottantcreate1" class="createBillets">
+        <h2>Création de votre compte</h2>
+        <div id="elementcreate1">
+            <p class="small">*Champs obligatoires</p>
+            <div class="inputlog margebottomappliq">
+                <input type="email" id="adressemail" name="adressemail" placeholder="Adresse e-mail*">
+            </div>
+            <div id="emailnonsaisi">
+                <p>Veuillez saisir une adresse e-mail valide.</p>
+            </div>
+            <a href="#" id="createpopup1" class="left" onclick="ValidateEmail(adressemail)">
+                <div id="connexionpopupdiv">
+                    <p id="boutonp">Continuer</p>
+                </div>
+            </a>
+        </div>
+    </article>
+
+
+    <article id="flottantcreate2" class="createBillets">
+        <h2>Création de votre compte</h2>
+        <div id="elementscreate2">
+            <p id="pcourriel" class="left">Adresse e-mail</p>
+            <p id="enumcourriel" class="left opacitemoins">bordin.theo@gmail.com</p>
+            <p class="small">*Champs obligatoires</p>
+            <div class="inputlog margebottomappliq">
+                <input type="password" id="password1" name="password1" class="password" placeholder="Mot de passe*">
+            </div>
+            <p class="left opacitemoins" id="precisionpass">Utilisez au moins huit caractères avec des lettres, des
+                chiffres et des symboles.</p>
+            <div class="inputlog margebottomappliq">
+                <input type="password" id="password2" name="password2" class="password" placeholder="Confirmer*">
+            </div>
+
+
+            <div id="sesouvenirlog" class="left" onclick="Afficher()">
+                <input type="checkbox" id="seepass" name="seepass">
+                <label for="seepass" onclick="Afficher()">Afficher le mot de passe</label>
+            </div>
+            <div id="passworddiffent">
+                <p>Mots de passe non identiques.</p>
+            </div>
+
+            <a href="#" id="createpopup2" class="left">
+                <div id="connexionpopupdiv">
+                    <p id="boutonp">Continuer</p>
+                </div>
+            </a>
+
+        </div>
+    </article>
+
+    <article id="flottantcreate3" class="createBillets">
+        <h2>Création de votre compte</h2>
+        <div id="elementscreate3">
+            <p class="small">*Champs obligatoires</p>
+            <div id="moumme">
+                <div>
+                    <input type="radio" id="miss" name="moummei" value="miss" checked>
+                    <label for="miss">Madame*</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="mister" name="moummei" value="mister">
+                    <label for="mister">Monsieur*</label>
+                </div>
+            </div>
+            <input type="text" id="firstname" name="firstname" placeholder="Prénom*" class="inputlog margebottomappliq">
+            <input type="text" id="name" name="name" placeholder="Nom*" class="inputlog margebottomappliq">
+            <input type="date" id="dateborn" name="dateborn" placeholder="Date de naissance (JJ/MM/AAAA)*"
+                class="inputlog margebottomappliq">
+            <input type="tel" id="numtel" name="numtel" placeholder="Numéro de téléphone"
+                class="inputlog margebottomappliq">
+            <div id="informationsmanquante">
+                <p>Veuillez saisir vos informations personnels</p>
+            </div>
+            <a href="#" id="createpopup3" class="center">
+                <div id="connexionpopupdiv">
+                    <p id="boutonp">Créer mon compte</p>
+                </div>
+            </a>
+        </div>
+    </article>
+    <article id="panierpopup">
+        <h2>Votre Panier</h2>
+        <article id="panierVide">
+            <p>Atention, votre panier est vide.</p>
+        </article>
+        <!-- <article class="billetspanier">
+            <div class="line1pannier">
+                <div class="departarrivepaniertrain">
+                    <h3>Paris</h3>
+                    <p>Gare de Montparnasse Paris 7</p>
+                </div>
+                <div class="departarrivepaniertrain">
+                    <h3>Lyon</h3>
+                    <p>Gare Lyon Peyrache</p>
+                </div>
+                <div class="prixtrainxx">
+                    <h3>34 €</h3>
+                    <img src="../assets/icons/croix.png" id="deletebillet1" alt="icone croix rouge supprimé billet">
+                </div>
+            </div>
+
+
+            <div class="line2pannier">
+                <div class="colonnel2">
+                    <p>Départ</p>
+                    <div class="rectanglecolone">
+                        <img src="../assets/icons/calendar.png" alt="icone calendrier">
+                        <p>18 mai 2003 8h53</p>
+
+                    </div>
+                </div>
+                <div class="colonnel2">
+                    <p>Voyageurs</p>
+                    <div class="rectanglecolone">
+                        <img src="../assets/icons/members.png" alt="icone membre">
+                        <p>1 adulte 25-30 ans</p>
+                    </div>
+                </div>
+                <div class="colonnel2">
+                    <p>Classe</p>
+                    <div class="rectanglecolone">
+                        <p>Economique</p>
+                    </div>
+                </div>
+            </div>
+        </article> -->
+
+
+
+        <!-- <article class="billetspanier" id="billet2">
+            <div class="line1pannier">
+                <div class="departarrivepaniertrain">
+                    <h3>Lyon</h3>
+                    <p>Gare Lyon Peyrache</p>
+                </div>
+                <div class="departarrivepaniertrain">
+                    <h3>Paris</h3>
+                    <p>Gare de Montparnasse Paris 7</p>
+                </div>
+                <div class="prixtrainxx">
+                    <h3>35.30 €</h3>
+                    <img src="../assets/icons/croix.png" id="deletebillet2" alt="icone croix rouge supprimé billet">
+                </div>
+            </div>
+
+
+            <div class="line2pannier">
+                <div class="colonnel2">
+                    <p>Départ</p>
+                    <div class="rectanglecolone">
+                        <img src="../assets/icons/calendar.png" alt="icone calendrier">
+                        <p>18 mai 2003 8h53</p>
+
+                    </div>
+                </div>
+                <div class="colonnel2">
+                    <p>Voyageurs</p>
+                    <div class="rectanglecolone">
+                        <img src="../assets/icons/members.png" alt="icone membre">
+                        <p>1 adulte 25-30 ans</p>
+                    </div>
+                </div>
+                <div class="colonnel2">
+                    <p>Classe</p>
+                    <div class="rectanglecolone">
+                        <p>Economique</p>
+                    </div>
+                </div>
+            </div>
+        </article> -->
+        <article class="footerpanier" id="footerpanier">
+            <img src="../assets/footer/sncf.png" alt="icone sncf">
+            <div class="finalpopuppannier">
+                <h3 id="totalPanier"></h3>
+                <!--prix total panier géré pas le js-->
+                <a href="../paiement/reserverbillets.html" class="buttonpayerpanier">
+                    <p>Payer</p>
+                </a>
+            </div>
+        </article>
+    </article>
+
+
+
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <article id="general">
+            <img src="../assets/footer/logo.png" alt="logo train travel">
+            <div id="tel">
+                <img src="../assets/footer/tel.png" alt="logo telephone">
+                <p>01 00 00 00 00</p>
+            </div>
+            <div id="mel">
+                <img src="../assets/footer/mel.png" alt="logo mel">
+                <p>train.travel@global.com</p>
+            </div>
+            <div id="banque">
+                <img src="../assets/footer/visa.png" alt="logo visa">
+                <img src="../assets/footer/mastercard.png" alt="logo mastercard">
+            </div>
+            <p>&copy; Copyright - Developed by Lorris & Julien with passion</p>
+        </article>
+        <article id="obligations">
+            <h4>Obligations</h4>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">CGV</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">CGU</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Qui sommes nous ?</p>
+            </div>
+        </article>
+        <article id="autre">
+            <h4>Autre</h4>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Faire partit de l'équipe</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Affiliation</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Site Partenaire</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Autre</p>
+            </div>
+        </article>
+        <article id="reseaux">
+            <h4>Suivez-nous !</h4>
+            <a href="https://www.instagram.com/sncf/" target="_blank">
+                <img src="../assets/footer/instagram.png" alt="logo instagram" width="24px" height="24px">
+            </a>
+            <a href="https://www.facebook.com/SNCFOFFICIEL" target="_blank">
+                <img src="../assets/footer/facebook.png" alt="logo facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/sncf/" target="_blank">
+                <img src="../assets/footer/linkedin.png" alt="logo linkedin">
+            </a>
+        </article>
+        <article id="last">
+            <p>Disponible aussi sur Mobile</p>
+            <div>
+                <img id="mobilestore" src="../assets/icons/mobileapp.png" alt="icone appstore et playstore">
+            </div>
+            <img id="logosncf" src="../assets/footer/sncf.png" alt="logo sncf">
+        </article>
+    </footer>
+
+    <script src="../popup.js"></script>
+    <script src="../connexion.js"></script>
+    <script src="savelog.js"></script>
+    <script src="recherchetrain.js"></script>
+    <!-- <script src="panier.js"></script> -->
+
+
+</body>
+
+</html>

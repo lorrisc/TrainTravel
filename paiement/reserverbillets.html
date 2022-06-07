@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TrainTravel</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="paiement.css" />
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="Titreprincipal">
+            <a href="../index.html" id="traintravel">TrainTravel</a>
+        </h1>
+    </header>
+    <section id="pagePaiement">
+        <section id="billets">
+            <div class="TitreBoxPaiment">
+                <h2>Récapitulatif panier</h2>
+            </div>
+
+            <section id="recapBillets"></section>
+
+            <div class="prixTotalDu">
+                <h2 id="prixTot">Total : 30,97€</h2>
+            </div>
+        </section>
+
+        <section id="loginInscription">
+            <article id="logInPaiement" class="connexionInscription">
+                <div class="TitreBoxPaiment">
+                    <h2>Se connecter</h2>
+                </div>
+                <div class="contenuPaiementBox">
+                    <p class="right smallPaiement">*champs obligatoires</p>
+                    <input type="email" id="emailLogInPaiement" name="emailLogInPaiement"
+                        placeholder="Adresse e-mail*" />
+                    <input type="password" id="passLogInPaiement" name="passLogInPaiement"
+                        placeholder="Mot de passe*" />
+                    <p class="right smallPaiement" id="passwordForget">
+                        Mot de passe oublié
+                    </p>
+                </div>
+                <div class="validateForm" id="connexionPaiement">
+                    <p>Me connecter</p>
+                </div>
+                <div class="nouveaute" id="loginOK">
+                    <h2>Connexion établie.</h2>
+                </div>
+                <div class="nouveaute" id="loginFail">
+                    <h2>Connexion non établie.</h2>
+                </div>
+            </article>
+
+            <article id="CreateAccountPaiement" class="connexionInscription">
+                <div class="TitreBoxPaiment" id="titre1">
+                    <h2>S'inscrire</h2>
+                </div>
+                <div class="contenuPaiementBox">
+                    <p class="right smallPaiement">*champs obligatoires</p>
+                    <input type="email" id="emailCreatePaiement" name="emailCreatePaiement"
+                        placeholder="Adresse e-mail*" />
+                </div>
+                <div class="validateForm" id="ContinuerPaiementCreate1" onclick="ValidateEmail(emailCreatePaiement)">
+                    <p>Continuer</p>
+                </div>
+                <div class="nouveaute" id="emailError">
+                    <h2>Veuillez renseigné un email correct.</h2>
+                </div>
+            </article>
+
+            <article id="CreateAccountPaiement2" class="connexionInscription">
+                <div class="TitreBoxPaiment">
+                    <h2>S'inscrire</h2>
+                </div>
+                <div class="contenuPaiementBox">
+                    <p class="smallPaiement">Adresse e-mail</p>
+                    <p class="opacitemoins smallPaiement" id="enumcourriel">
+                        bordin.theo@gmail.com
+                    </p>
+                    <p class="smallPaiement right">*Champs obligatoires</p>
+                    <input type="password" id="password2" name="password2" placeholder="Mot de passe*" />
+                    <p class="smallPaiement" id="precisionpass">
+                        Utilisez au moins huit caractères avec des lettres,
+                        des chiffres et des symboles.
+                    </p>
+                    <input type="password" id="passwordPaiement2" name="passwordPaiement2" placeholder="Confirmer*" />
+
+                    <div id="sesouvenirlog" class="left" onclick="Afficher()">
+                        <input type="checkbox" id="seepassPaiement" name="seepassPaiement" />
+                        <label for="seepassPaiement" class="smallPaiement" onclick="Afficher()">Afficher le mot de
+                            passe</label>
+                    </div>
+                    <div id="passworddiffent">
+                        <p>Mots de passe non identiques.</p>
+                    </div>
+                    <div id="patternIncorrect">
+                        <p>
+                            Minimum 8 caractères, minuscule, majuscule,
+                            chiffres, caractère speciaux.
+                        </p>
+                    </div>
+                </div>
+                <div class="validateForm" id="ContinuerPaiementCreate2">
+                    <p>Continuer</p>
+                </div>
+            </article>
+
+            <article id="CreateAccountPaiement3" class="connexionInscription">
+                <div class="TitreBoxPaiment">
+                    <h2>S'inscrire</h2>
+                </div>
+                <div class="contenuPaiementBox">
+                    <p class="smallPaiement right">*Champs obligatoires</p>
+
+                    <div id="moumme">
+                        <div>
+                            <input type="radio" id="miss" name="moummei" value="miss" checked />
+                            <label for="miss">Madame*</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="mister" name="moummei" value="mister" />
+                            <label for="mister">Monsieur*</label>
+                        </div>
+                    </div>
+
+                    <input type="text" id="firstname" name="firstname" placeholder="Prénom*"
+                        class="inputlog margebottomappliq" />
+                    <input type="text" id="name" name="name" placeholder="Nom*" class="inputlog margebottomappliq" />
+                    <input type="date" id="dateborn" name="dateborn" placeholder="Date de naissance (JJ/MM/AAAA)*"
+                        class="inputlog margebottomappliq" />
+                    <input type="tel" id="numtel" name="numtel" placeholder="Numéro de téléphone*"
+                        class="inputlog margebottomappliq" />
+
+                    <div id="informationsmanquante">
+                        <p>Veuillez saisir vos informations personnels</p>
+                    </div>
+                </div>
+                <div class="validateForm" id="PaiementCreate3">
+                    <p>Créer mon compte</p>
+                </div>
+            </article>
+
+            <article id="validationCreate" class="connexionInscription">
+                <div class="TitreBoxPaiment">
+                    <h2>S'inscrire</h2>
+                </div>
+                <div class="contenuPaiementBox">
+                    <p>Votre compte a été créé avec succès</p>
+                    <p>Merci de vous connecter</p>
+                </div>
+                <div class="validateForm" id="linkLogin">
+                    <p>Se connecter</p>
+                </div>
+            </article>
+        </section>
+        <article id="InfoPersoPaiement" class="InfoPerso">
+            <div class="TitreBoxPaiment">
+                <h2>Information personnelle</h2>
+            </div>
+            <div id="contenuPaiementBoxInfoPerso">
+                <p class="right smallPaiement">*champs obligatoires</p>
+                <input type="text" id="namePaiement" name="namePaiement" placeholder="Nom*" />
+                <input type="text" id="prenomPaiement" name="prenomPaiement" placeholder="Prénom*" />
+                <input type="text" id="courreilPaiement" name="courreilPaiement" placeholder="Courriel*" />
+            </div>
+            <div id="validateFormInfoPerso">
+                <p>Valider mes informations</p>
+            </div>
+            <div class="nouveaute infoManquante" id="infoPersoManquante">
+                <h2>veuillez saisir vos informations personnel.</h2>
+            </div>
+        </article>
+
+        <article id="AdressePaiement">
+            <div class="TitreBoxPaiment">
+                <h2>Adresse</h2>
+            </div>
+            <div id="contenuPaiementBoxAdresse">
+                <p class="right smallPaiement">*champs obligatoires</p>
+                <input type="text" id="numRue" name="numRue" placeholder="Numéro de rue*" />
+                <input type="text" id="nomRue" name="nomRue" placeholder="Nom rue*" />
+                <input type="text" id="ville" name="ville" placeholder="Ville*" />
+                <input type="text" id="cp" name="cp" placeholder="Code postal*" />
+            </div>
+            <div id="validateFormAdresse">
+                <p>Valider mon adresse</p>
+            </div>
+            <div class="nouveaute infoManquante" id="infoAdressManquante">
+                <h2>
+                    veuillez saisir vos informations relatives à votre
+                    adresse.
+                </h2>
+            </div>
+        </article>
+
+        <article id="typePaiement">
+            <div class="TitreBoxPaiment">
+                <h2>Type de paiment</h2>
+            </div>
+            <p>Veuillez sélectionner votre mode de paiement :</p>
+            <div id="imgTypePaiement">
+                <img src="../assets/icons/MastercardVisa.png" alt="logo visa" id="visaPaiementIcon" />
+                <img src="../assets/icons/paypal.png" alt="logo paypal" id="paypalPaiementIcon" />
+                <img src="../assets/icons/bitcoin.png" alt="logo bitcoin" id="btcPaiementIcon" />
+            </div>
+            <div class="nouveaute">
+                <h2>Nouveauté : paiement en Bitcoin disponible !</h2>
+            </div>
+        </article>
+
+        <article id="visaPaiement">
+            <div class="TitreBoxPaiment">
+                <h2>Paiement par carte de crédit/débit</h2>
+            </div>
+            <div id="contenuPaiementBoxAdresse">
+                <label for="numCB">Numéro de carte</label>
+                <input type="number" id="numCB" name="numCB" placeholder="XXXX XXXX XXXX XXXX" pattern="^[0-9]*$"
+                    maxlength="16" />
+                <label for="inputDateExpe">Date d'expiration</label>
+                <input id="inputDateExpe" type="month" name="inputDateExpe" min="2022-06" value="2022-06" />
+                <label for="nomCB">Nom apparaissant sur la carte</label>
+                <input type="text" id="nomCB" name="nomCB" />
+
+                <label for="ccvInput">CVV</label>
+                <input type="number" id="ccvInput" name="ccvInput" pattern="[0-9]{3}" />
+            </div>
+            <div id="validateCancelCard">
+                <div id="cancelPaiment">
+                    <p>Annuler</p>
+                </div>
+                <div id="validateCard">
+                    <p>Utiliser cette carte</p>
+                </div>
+            </div>
+            <div class="nouveaute" id="cardSave">
+                <h2>Carte enregistrée avec succès !</h2>
+            </div>
+        </article>
+
+        <div id="paiementFinalValidation">
+            <p>Payer</p>
+        </div>
+
+        <!--POPUP ECRAN COMMANDE VALIDE PAYE PASSE-->
+        <div id="popupconfirm">
+            <div>
+                <div class="TitreBoxPaiment" id="titrepopupfin">
+                    <h2>Confirmation de commande</h2>
+                </div>
+                <h3>Merci pour votre commande.</h3>
+                <p>Vous recevrez un mail dans les plus brefs délais.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <article id="general">
+            <img src="../assets/footer/logo.png" alt="logo train travel" />
+            <div id="tel">
+                <img src="../assets/footer/tel.png" alt="logo telephone" />
+                <p>01 00 00 00 00</p>
+            </div>
+            <div id="mel">
+                <img src="../assets/footer/mel.png" alt="logo mel" />
+                <p>train.travel@global.com</p>
+            </div>
+            <div id="banque">
+                <img src="../assets/footer/visa.png" alt="logo visa" />
+                <img src="../assets/footer/mastercard.png" alt="logo mastercard" />
+            </div>
+            <p>
+                &copy; Copyright - Developed by Lorris & Julien with passion
+            </p>
+        </article>
+        <article id="obligations">
+            <h4>Obligations</h4>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">CGV</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">CGU</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Qui sommes nous ?</p>
+            </div>
+        </article>
+        <article id="autre">
+            <h4>Autre</h4>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Faire partit de l'équipe</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Affiliation</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Site Partenaire</p>
+            </div>
+            <div class="chevron">
+                <p>&#62;</p>
+                <p class="linkfoot">Autre</p>
+            </div>
+        </article>
+        <article id="reseaux">
+            <h4>Suivez-nous !</h4>
+            <a href="https://www.instagram.com/sncf/" target="_blank">
+                <img src="../assets/footer/instagram.png" alt="logo instagram" width="24px" height="24px" />
+            </a>
+            <a href="https://www.facebook.com/SNCFOFFICIEL" target="_blank">
+                <img src="../assets/footer/facebook.png" alt="logo facebook" />
+            </a>
+            <a href="https://www.linkedin.com/company/sncf/" target="_blank">
+                <img src="../assets/footer/linkedin.png" alt="logo linkedin" />
+            </a>
+        </article>
+        <article id="last">
+            <p>Disponible aussi sur Mobile</p>
+            <div>
+                <img id="mobilestore" src="../assets/icons/mobileapp.png" alt="icone appstore et playstore" />
+            </div>
+            <img id="logosncf" src="../assets/footer/sncf.png" alt="logo sncf" />
+        </article>
+    </footer>
+
+    <script src="createAccountBox.js"></script>
+    <script src="modePaiementBox.js"></script>
+    <script src="loginAccount.js"></script>
+    <script src="createBillet.js"></script>
+    <script src="reserverBillet.js"></script>
+    <script src="furetamesurepopup.js"></script>
+</body>
+
+</html>

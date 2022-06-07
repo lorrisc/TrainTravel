@@ -1,0 +1,202 @@
+/* FONT -- FONT -- FONT */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*Oswald Regular 400*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/*Nunito Bold 700*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* Nunito regular 400*/
+/* FONT -- FONT -- FONT */
+
+#ticketuserparts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ticketuser1{
+    width: 50%;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 20px;
+    padding-RIGHT: 20px;
+    padding-bottom: 14px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    margin: 80px;
+    margin-bottom: 200px;
+}
+#principalticket{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#DestinationXCodebar{
+    width: 45%;
+}
+#DestinationXCodebar  h2{
+    font-size: 38px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-top: 14px;
+}
+#DestinationXCodebar img{
+    width: 90%;
+    margin-top: 24px;
+}
+#sncflogo{
+    margin-top: 14px;
+}
+#qrcode{
+    width: 23%;
+
+}
+#qrcode img{
+    width: 100%;
+}
+
+
+
+#infoticket {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+#infoticket p{
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+#infoticket div{
+    width: 29%;
+}
+#datedepartticket, #dateretourticket, #classeticket{
+    display: flex;
+    flex-direction: column;
+}
+#datedepartticket div,#dateretourticket div,#classeticket div{
+    width: 100%;
+    background-color: #E3E3E3;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-radius: 8px;
+    margin-top: 4px;
+}
+#classeticket div{
+    justify-content: center;
+}
+#datedepartticket div img,#dateretourticket div img,#classeticket div img{
+   margin-right: 9px;
+}
+
+
+#ticketboutton{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+#ticketboutton div{
+    height: 45px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+#liketicket{
+    background-color: #D4A258;
+    width: 30%;
+}
+#liketicket:hover{
+    background-color: #cc851c;
+}
+#downloadticket{
+    background-color: #5893D4;
+    width: 60%;
+
+}
+#downloadticket:hover{
+    background-color: #1b73d1;
+}
+#ticketboutton p{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+#liketicket, #downloadticket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#classeticket div,#dateretourticket div,#datedepartticket div{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    
+}
+
+
+
+@media screen and (max-width: 1700px){
+    #sncflogo {
+        width: 165px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 35px;
+    }
+
+}
+@media screen and (max-width: 1600px){
+    #sncflogo {
+        width: 155px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 32px;
+    }
+
+}
+@media screen and (max-width: 1500px){
+    #sncflogo {
+        width: 145px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 29px;
+    }
+
+}
+@media screen and (max-width: 1400px){
+    #sncflogo {
+        width: 135px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 26px;
+    }
+
+}
+@media screen and (max-width: 1300px){
+    #sncflogo {
+        width: 125px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 23px;
+    }
+
+}
+@media screen and (max-width: 1200px){
+    #sncflogo {
+        width: 115px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width: 1100px){
+    #sncflogo {
+        width: 105px;
+    }
+    #DestinationXCodebar h2 {
+        font-size: 17px;
+    }
+
+}

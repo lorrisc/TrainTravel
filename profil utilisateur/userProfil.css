@@ -1,0 +1,349 @@
+/* FONT -- FONT -- FONT */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*Oswald Regular 400*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/*Nunito Bold 700*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* Nunito regular 400*/
+/* FONT -- FONT -- FONT */
+
+
+#pageprofiluser{
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 700px;
+}
+#settingnavigation{
+    background-color: #D0D0D0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.informations{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+#useridimg{
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+#settingnavigation div img{
+    width: 24px;
+}
+#settingnavigation div{
+    display: flex;
+    align-items: center;
+}
+#settingnavigation div img{
+    margin-right: 25px;
+}
+.lignenavsetting {
+    height: 1px;
+    background-color: #818181;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.informations p{
+    color: #818181;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.informations p:hover{
+    
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#acutelopen p{
+    color: black;
+    text-decoration: underline;
+}
+#acutelopen p:hover{
+    color: #818181;
+}
+
+/*PARTIE PRINCIPAL - APERCU DU COMTPE*/
+
+#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart{
+    width: 50%;
+    padding: 5%;
+}
+#apercuducompte h2, #editprofil h2, #abonnement h2, #editpassword h2, #notificationparts h2, #confidentialiteparts h2, #recupart h2{
+    font-size: 36px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+#apercuducompte h3{
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+.informationscompte{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.informationscompte .typeinfo{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #818181;
+    width: 50%;
+}
+.informationscompte .inforesultat{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color:black;
+    width: 50%;
+}
+
+.buttoneditprofil{
+    width: 200px;
+    height: 45px;
+    border: solid;
+    border-radius: 8px;
+    border-color: #5993D4;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+
+}
+
+
+.buttoneditprofil:hover{
+    border-color: #1b73d1;
+    
+}
+.buttoneditprofil p{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+
+#editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart{
+    display: none;
+}
+
+/*editprofil*/
+
+.lineeditprofil,  .lineeditpassword{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    margin-bottom: 20px;
+    justify-content:space-between;
+}
+#editprofil p,#editpassword p{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+#editprofil input, #editprofil select, #editpassword input{
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    height: 30px;
+    padding-left: 15px;
+}
+#editprofil input:focus, #editprofil select:focus, #editpassword input:focus{
+    outline: none;
+}
+.lineeditprofildouble{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.lineeditprofildouble div{
+    width: 48%;
+}
+.lineeditprofildouble input{
+    width: 94%;
+}
+.lineeditpassword input{
+    width: 100%;
+}
+#exception, #paidepass{
+    color: #818181;
+}
+#exception{
+    margin-right: 20px;
+}
+#exception:hover{
+    cursor: pointer;
+    color: black;
+}
+#buttonpass {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    align-items: center;
+}
+#buttonpass:hover{
+    cursor: pointer;
+}
+/*BOUTTON*/
+
+#userbutton{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    color: white;
+}
+#hitoriqueuser, #ticketsuser, #trajetlike{
+    width: 80%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-out;
+
+}
+#userbutton article:hover{
+    cursor: pointer;
+}
+#userbutton article p{
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+#userbutton #hitoriqueuser, #userbutton #ticketsuser{
+    background-color: #5893D4;
+}
+#userbutton #hitoriqueuser:hover, #userbutton #ticketsuser:hover{
+    background-color: #1b73d1;
+}
+#userbutton #trajetlike{
+    background-color: #D4A258;
+}
+#userbutton #trajetlike:hover{
+    background-color: #cc851c;
+}
+a{
+    color: white;
+}
+
+
+@media screen and (max-width: 1800px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 13%;
+    padding-right: 13%;
+}}
+@media screen and (max-width: 1700px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 12%;
+    padding-right: 12%;
+}}
+@media screen and (max-width: 1600px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 4.5%;
+}
+#userbutton {
+    padding-top: 4.5%;
+}
+}
+@media screen and (max-width: 1500px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 4%;
+}
+#userbutton {
+    padding-top: 4%;
+}
+}
+@media screen and (max-width: 1400px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 3.5%;
+}
+#userbutton {
+    padding-top: 3.5%;
+}
+#userbutton article p {
+    font-size: 23.5px;
+}
+}
+@media screen and (max-width: 1300px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 8%;
+    padding-right: 8%;
+}#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 3%;
+}
+#userbutton {
+    padding-top: 3%;
+}
+#userbutton article p {
+    font-size: 23px;
+}
+}
+@media screen and (max-width: 1200px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 7%;
+    padding-right: 7%;
+}#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 2.5%;
+}
+#userbutton {
+    padding-top: 2.5%;
+}
+#userbutton article p {
+    font-size: 22.5px;
+}
+}
+@media screen and (max-width: 1100px){
+#pageprofiluser {
+    display: flex;
+    padding-left: 6%;
+    padding-right: 6%;
+}#apercuducompte, #editprofil, #abonnement, #editpassword, #notificationparts, #confidentialiteparts, #recupart {
+    padding: 2%;
+}
+#userbutton {
+    padding-top: 2%;
+}
+#userbutton article p {
+    font-size: 22px;
+}
+}

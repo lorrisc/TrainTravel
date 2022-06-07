@@ -1,0 +1,2023 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*suppression de l'icone calendrier a la droite des input date*/
+/* input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+} */
+
+a:link {
+    text-decoration: none;
+}
+
+#traintravel {
+    color: black
+}
+
+
+/* FONT -- FONT -- FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*Oswald Regular 400*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/*Nunito Bold 700*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* Nunito regular 400*/
+/* FONT -- FONT -- FONT */
+
+
+/* HEADER -- HEADER -- HEADER */
+
+
+
+
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+}
+
+h1 {
+    padding-left: 50px;
+    width: 50%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    transition: all 0.3s ease-out;
+}
+
+h1:hover {
+    font-size: 37px;
+}
+
+#bouttonheader {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#bouttonheader div,
+#bouttonheader a {
+    box-sizing: border-box;
+    width: 130px;
+    height: 50px;
+    border-radius: 8px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#inscription,
+#cancel,
+#deconnexion {
+    border: solid;
+    border-width: 1px;
+    border-color: #5893D4;
+    color: #5893D4;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#inscription:hover,
+#deconnexion:hover,
+#cancel:hover {
+    color: #1b73d1;
+    border-color: #1b73d1;
+}
+
+#connexion:hover,
+#profil:hover,
+#connexionpopup:hover,
+#createpopup1:hover,
+#createpopup2:hover,
+#createpopup3:hover {
+    background-color: #1b73d1;
+}
+
+#connexion,
+#profil,
+#connexionpopup,
+#createpopup1,
+#createpopup2,
+#createpopup3 {
+    color: white;
+    background: #5893D4;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#connexionpopup,
+#createpopup1,
+#createpopup2,
+#createpopup3,
+#cancel {
+    margin-top: 15px;
+    transition: all 0.3s ease-out;
+}
+
+#panier {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#panier:hover {
+    color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
+
+#inscription,
+#deconnexion,
+#connexion,
+#panier,
+#profil,
+#connexionpopup,
+#cancel,
+#createpopup1,
+#createpopup2,
+#createpopup3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+#deconnexion,
+#profil {
+    display: none;
+}
+
+
+.compteurPanier {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1b73d1;
+    color: #5893D4;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER -- HEADER -- HEADER */
+
+
+
+
+/* DESTINATION -- DESTINATION -- DESTINATION */
+
+
+#userdestination {
+    background-image: url("assets/destinationUtilisateur/paysagebackground.jpg");
+    width: 95%;
+    height: 800px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+#maptrajet {
+    width: 40%;
+    border: solid;
+    border-radius: 8px;
+    border-width: 4px;
+    border-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#destinationprecise {
+    width: 50%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#userdestination h2 {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 50px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#titreformulaire {
+    width: 17%;
+    height: 5%;
+    background-color: #5893D4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: -10px;
+    z-index: 2;
+}
+
+
+#titreformulaire p,
+#titreformulaire2 p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#lignedatevoyageur p,
+#titrelignedatevoyageur p,
+#lignedepartarrive p,
+#titrelignedepartarrive p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#titreformulaire img {
+    width: 24px;
+    height: 24px;
+    margin-right: 4%;
+}
+
+#formulairerecherche {
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#formulairerecherche #titrelignedepartarrive,
+#formulairerecherche2 #titrelignedepartarrive {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+#formulairerecherche #titrelignedepartarrive p {
+    width: 47%;
+}
+
+#lignedepartarrive {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+}
+
+#lignedepartarrive #garededepart,
+#lignedepartarrive #garedarrivee {
+    width: 47%;
+    background-color: #E3E3E3;
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+#lignedepartarrive #garededepart img,
+#lignedepartarrive #garedarrivee img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#lignedepartarrive #garededepart input,
+#lignedepartarrive #garedarrivee input {
+    width: 80%;
+    height: 80%;
+}
+
+#titrelignedatevoyageur,
+#lignedatevoyageur {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#lignedatevoyageur img {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+#voyageur {
+    color: black;
+}
+
+.datetrain,
+#datedepart,
+#heuredepart {
+    width: 30%;
+}
+
+#titrelignedepartarrive p,
+#lignedepartarrive div,
+#titrelignedatevoyageur p,
+#lignedatevoyageur div,
+#voyageur {
+    margin: 5px;
+}
+
+#datedepart,
+#heuredepart,
+#voyageur {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background-color: #E3E3E3;
+    border-radius: 8px;
+}
+
+#datedepart img,
+#heuredepart img,
+#voyageur img {
+    width: 24px;
+    height: 24px;
+}
+
+#datedepart input,
+#heuredepart input {
+    width: 80%;
+    height: 80%;
+}
+
+#typevoyageur,
+#voyageur {
+    width: 35%;
+}
+
+.popup {
+    background-color: #E3E3E3;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 8px;
+    width: 30%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.popup h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#voyageur {
+    display: flex;
+    cursor: pointer;
+}
+
+.ligneaddpassager {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#boutonpopupvoyageur {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#boutonvalidationpassager,
+#boutoncancelpassager {
+    text-align: center;
+    width: 38%;
+    color: white;
+    height: 35px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#boutonvalidationpassager {
+    background-color: #5893D4;
+
+}
+
+#boutoncancelpassager {
+    background-color: red;
+
+}
+
+#boutoncancelpassager:hover {
+    background-color: rgb(253, 72, 72);
+
+}
+
+#boutonvalidationpassager:hover {
+    background-color: #1b73d1
+}
+
+.typepassager {
+    width: 50%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.modifiernbr {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.modifiernbr p {
+    width: 25%;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+}
+
+.valuenbrpassage {
+    background-color: white;
+}
+
+.plus,
+.moins {
+    background-color: #5893D4;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    color: white;
+
+}
+
+.plus:hover,
+.moins:hover {
+    background-color: #1b73d1;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#lignerecherche {
+    background-color: #5893D4;
+    width: 30%;
+    display: flex;
+    border-radius: 8px;
+    height: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-out;
+}
+
+#lignerecherche:hover {
+    background-color: #1b73d1;
+}
+
+
+#lignerecherche p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: auto;
+}
+
+#lignerecherche img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+#formulairerecherche input,
+#formulairerecherche2 input {
+    border: none;
+    background-color: transparent;
+}
+
+#formulairerecherche input:focus,
+#formulairerecherche2 input:focus {
+    outline: none;
+}
+
+/*HISTORIQUE TRAIN*/
+#historiquetrain {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    width: 80%;
+    height: 16%;
+    color: white;
+    align-content: center;
+}
+
+#historiquetrain h3 {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+#historiqueparts {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 50%;
+}
+
+#historiqueparts div {
+    background-color: #5893D4;
+    margin-right: 1px;
+    width: 30%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#historiqueparts div:hover {
+    background-color: #1b73d1;
+}
+
+#historiqueparts div img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5%;
+}
+
+
+/*HISTORIQUE TRAIN*/
+/*
+#departarrive{
+    background-color: white;
+    width: 100%;
+    height: 45%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#departarrive div{
+    background-color: #E3E3E3;
+    width: 40%;
+    height: 65px;
+    margin: 3px;
+    border-radius: 8px;
+}
+#departarrive div input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    background-color: transparent;
+}
+#departarrive div input:focus{
+
+    outline: none;
+
+}
+#departarrive div p{
+    width: 17%;
+    margin-left: 7%;
+}
+#garedepart, #garearrivee{
+    display: flex;
+    align-items: center;
+}
+#complementdate, #complementdater{
+    width: 100%;
+}/*
+/* DESTINATION -- DESTINATION -- DESTINATION */
+
+/* MEILLEURES VENTES -- MEILLEURES VENTES -- MEILLEURES VENTES */
+
+
+#destination h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 50px;
+}
+
+#bestvente,
+#bestventepays {
+    display: flex;
+    justify-content: center;
+}
+
+#bestvente article,
+#bestventepays article {
+    width: 15%;
+    margin: 15px;
+    cursor: pointer;
+
+}
+
+#bestvente article img,
+#bestventepays article img {
+    width: 100%;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+}
+
+#bestvente article img:hover,
+#bestventepays article img:hover {
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
+}
+
+#bestvente div,
+#bestventepays div {
+    margin-top: 20px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+}
+
+#bestvente div p,
+#bestventepays div p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 6px;
+}
+
+#bestvente article div:hover,
+#bestventepays article div:hover {
+    background-color: #ddebfa;
+}
+
+.voirplus {
+    width: 240px;
+    height: 60px;
+    background-color: #5893D4;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.voirplus:hover {
+    background-color: #1b73d1;
+}
+
+
+.voirplus p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* MEILLEURES VENTES -- MEILLEURES VENTES -- MEILLEURES VENTES */
+
+
+
+/* POURQUOI NOUS -- POURQUOI NOUS -- POURQUOI NOUS */
+
+
+#pourquoinous {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pourquoinous h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 100px;
+    margin-top: 110px;
+}
+
+#preuve {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#preuve article {
+    display: flex;
+    margin-bottom: 20px;
+    width: 35%;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+#pourquoinous article img {
+    height: 100%;
+}
+
+#pourquoinous article h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#assurancetext,
+#serviceclienttext,
+#prixtext {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 30px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+/* POURQUOI NOUS -- POURQUOI NOUS -- POURQUOI NOUS */
+
+
+
+/* FOOTER -- FOOTER -- FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+footer p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#obligations p,
+#autre p {
+    margin-bottom: 15px;
+
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+footer #tel p,
+footer #mel p {
+    margin-left: 15px;
+}
+
+footer #general #tel {
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+
+
+footer #general #mel {
+    margin-bottom: 80px;
+}
+
+footer #banque img {
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+footer #reseaux img {
+    margin-right: 20px;
+}
+
+footer #last #logosncf {
+    margin-top: 60px;
+}
+
+footer #last #mobilestore {
+    margin-left: -30px;
+}
+
+footer .chevron p {
+    margin-right: 12px;
+}
+
+footer .linkfoot:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer #reseaux a {
+    color: black;
+
+}
+
+/* FOOTER -- FOOTER -- FOOTER */
+
+
+
+
+
+
+
+/*POP UP CONNEXION*/
+#flottantlogin {
+    position: absolute;
+    width: 667px;
+    height: 430px;
+    top: 94px;
+    /* right: 190px; */
+    border-radius: 8px;
+    background-color: white;
+    z-index: 4;
+
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.loginIndex {
+    right: 20px;
+}
+
+.loginBillets {
+    right: 190px;
+}
+
+.createIndex {
+    right: 190px;
+}
+
+.createBillets {
+    right: 360px;
+}
+
+
+#flottantlogin h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#elements {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#elements .inputlog {
+    height: 40px;
+    width: 100%;
+
+}
+
+.inputlog input {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #e3e3e3;
+
+    padding-left: 2%;
+}
+
+#elementscreate3 input {
+    height: 40px;
+    width: 100%;
+
+    padding-left: 2%;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #e3e3e3;
+}
+
+#elements input:focus,
+#elementscreate3 input {
+    outline: none;
+}
+
+.margebottomappliq {
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+#bottominput {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loginnonetabli,
+#passworddiffent,
+#patternmauvais,
+#emailnonsaisi,
+#informationsmanquante,
+#patternIncorrect {
+    background-color: red;
+    border-radius: 8px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#passworddiffent,
+#patternIncorrect,
+#patternmauvais {
+    margin-top: 15px;
+}
+
+#emailnonsaisi,
+#informationsmanquante {
+    margin-top: 9px;
+}
+
+#sesouvenirlog {
+    display: flex;
+    align-items: center;
+}
+
+#patternmauvais {
+    height: 45px;
+}
+
+#patternmauvais P {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+
+}
+
+#sesouvenirlog {
+    display: flex;
+    align-items: center;
+}
+
+#sesouvenirlog input {
+    cursor: pointer;
+}
+
+.small,
+#flottantlogin label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.small2 {
+    font-size: 15px;
+}
+
+#flottantlogin label {
+    cursor: pointer;
+}
+
+#createaccountlink {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 100%;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#createaccountlink:hover {
+    color: #1b73d1;
+}
+
+#forgetpassword {
+    cursor: pointer;
+}
+
+#connexionpopup,
+#cancel,
+#createpopup1,
+#createpopup2,
+#createpopup3 {
+    height: 50px;
+    width: 45%;
+    border-radius: 8px;
+}
+
+#buttonpopup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#buttonpopup div {
+    cursor: pointer;
+}
+
+
+#fondcontraste {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 2550px;
+
+    background-color: black;
+    z-index: 3;
+    opacity: 0.6;
+}
+
+#fondcontrasteprofil {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+
+    background-color: black;
+    z-index: 3;
+    opacity: 0.6;
+}
+
+
+.small {
+    margin-bottom: 5px;
+}
+
+
+/*CREATION COMPTE POPUP*/
+
+#flottantcreate2 {
+    position: absolute;
+    width: 667px;
+    height: 400px;
+    top: 94px;
+    /* right: 360px; */
+
+    border-radius: 8px;
+    background-color: white;
+    z-index: 4;
+
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#flottantcreate1 {
+    position: absolute;
+    width: 667px;
+    height: 270px;
+    top: 94px;
+    /* right: 360px; */
+
+    border-radius: 8px;
+    background-color: white;
+    z-index: 4;
+
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#flottantcreate3 {
+    position: absolute;
+    width: 667px;
+    height: 480px;
+    top: 94px;
+    /* right: 360px; */
+    border-radius: 8px;
+    background-color: white;
+    z-index: 4;
+
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#flottantcreate1 h2,
+#flottantcreate2 h2,
+#flottantcreate3 h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+#elementscreate2,
+#elementcreate1,
+#elementscreate3 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+
+#elementscreate2 .inputlog,
+#elementcreate1 .inputlog {
+    height: 40px;
+    width: 100%;
+}
+
+.inputlog input {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #e3e3e3;
+}
+
+#elementscreate2 input:focus,
+#elementcreate1 input:focus {
+    outline: none;
+}
+
+.margebottomappliq {
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+#bottominput {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sesouvenirlog {
+    display: flex;
+    align-items: center;
+}
+
+#sesouvenirlog {
+    display: flex;
+    align-items: center;
+}
+
+#sesouvenirlog input {
+    cursor: pointer;
+}
+
+.small,
+#flottantcreate2 label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+#pcourriel,
+#enumcourriel,
+#precisionpass {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.opacitemoins {
+    opacity: 0.7;
+
+}
+
+#elementscreate2 p:not(#boutonp) {
+    margin-bottom: 5px;
+}
+
+.small2 {
+    font-size: 15px;
+}
+
+#flottantcreate2 label {
+    cursor: pointer;
+}
+
+#createaccountlink {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 100%;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#forgetpassword {
+    cursor: pointer;
+}
+
+#connexionpopup,
+#cancel,
+#createpopup1,
+#createpopup2,
+#createpopup3 {
+    height: 50px;
+    width: 45%;
+    border-radius: 8px;
+}
+
+#buttonpopup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#buttonpopup div {
+    cursor: pointer;
+}
+
+#elementcreate3 input {
+    width: 1000px;
+}
+
+#moumme {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+#moumme div {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+#moumme input {
+    width: 12%;
+}
+
+.center {
+    align-self: center;
+}
+
+
+/*PANIER POPUP*/
+#panierpopup {
+    position: absolute;
+    top: 94px;
+    right: 20px;
+    z-index: 4;
+
+    width: 801px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.line1pannier img,
+.line2pannier img {
+    width: 24px;
+    height: 24px;
+}
+
+#panierpopup h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.billetspanier {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+}
+
+.line1pannier,
+.line2pannier {
+    display: flex;
+    justify-content: space-between;
+}
+
+#panierpopup h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.billetspanier p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.prixtrainxx {
+    display: flex;
+    width: 24%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.prixtrainxx img {
+    margin-left: 25px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.departarrivepaniertrain {
+    width: 35%;
+    margin-right: 2px;
+}
+
+.departarrivepaniertrain p {
+    margin-top: 5px;
+}
+
+.colonnel2 {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+}
+
+.rectanglecolone {
+    display: flex;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    width: 91%;
+    height: 42px;
+    align-items: center;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.rectanglecolone img {
+
+    margin-right: 15px;
+}
+
+.footerpanier {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 35px;
+    align-items: center;
+}
+
+.buttonpayerpanier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5893D4;
+    border-radius: 8px;
+    height: 42px;
+    color: white;
+    margin-top: 10px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    transition: all 0.3s ease-out;
+
+}
+
+.buttonpayerpanier:hover {
+    background-color: #1b73d1;
+}
+
+.finalpopuppannier {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer article {
+    margin: 0 20px;
+}
+
+/* #panierVide {
+    background-color: rgb(255, 166, 0);
+    height: 60px;
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: black;
+} */
+
+
+/*RESPONSIVE*/
+/* @media screen and (max-width: 700px) and (min-width: 500px){
+    #bestvente {
+        flex-wrap: wrap;
+    }
+
+    #bestvente article {
+        width: 200px;
+    }
+
+} */
+
+iframe {
+    height: 730px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 1700px) {
+
+    #formulairerecherche #titrelignedepartarrive,
+    #titrelignedatevoyageur,
+    #lignedatevoyageur,
+    #lignedepartarrive {
+        width: 83%;
+    }
+
+    #titreformulaire {
+        width: 19%;
+    }
+
+    #userdestination h2 {
+        font-size: 46px;
+        margin-bottom: 45px;
+    }
+
+    #lignerecherche {
+        width: 32%;
+        margin-top: 25px;
+    }
+
+    #historiqueparts div {
+        width: 30.5%;
+    }
+
+    iframe {
+        height: 680px;
+    }
+
+    #lignedepartarrive #garededepart,
+    #lignedepartarrive #garedarrivee {
+        margin-bottom: 35px;
+    }
+
+    #formulairerecherche {
+        height: 42%;
+    }
+
+    #destinationprecise {
+        height: 90%;
+    }
+
+    footer {
+        padding: 40px 7%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1600px) {
+
+    #formulairerecherche #titrelignedepartarrive,
+    #titrelignedatevoyageur,
+    #lignedatevoyageur,
+    #lignedepartarrive {
+        width: 86%;
+    }
+
+    #titreformulaire {
+        width: 21%;
+    }
+
+    #userdestination h2 {
+        font-size: 44px;
+        margin-bottom: 40px;
+    }
+
+    #lignerecherche {
+        width: 34%;
+        margin-top: 20px;
+
+    }
+
+    #historiqueparts div {
+        width: 31%;
+    }
+
+    iframe {
+        height: 550px;
+    }
+
+    #lignedepartarrive #garededepart,
+    #lignedepartarrive #garedarrivee {
+        margin-bottom: 25px;
+    }
+
+    #formulairerecherche {
+        height: 44%;
+    }
+
+    #destinationprecise {
+        height: 85%;
+    }
+
+    #userdestination {
+        height: 700px;
+    }
+
+    footer {
+        padding: 40px 6%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+
+    #formulairerecherche #titrelignedepartarrive,
+    #titrelignedatevoyageur,
+    #lignedatevoyageur,
+    #lignedepartarrive {
+        width: 89%;
+    }
+
+    #titreformulaire {
+        width: 23%;
+    }
+
+    #userdestination h2 {
+        font-size: 42px;
+        margin-bottom: 35px;
+    }
+
+    #lignerecherche {
+        width: 36%;
+        margin-top: 15px;
+
+    }
+
+    #historiqueparts div {
+        width: 31.5%;
+    }
+
+    iframe {
+        height: 470px;
+    }
+
+    #lignedepartarrive #garededepart,
+    #lignedepartarrive #garedarrivee {
+        margin-bottom: 15px;
+    }
+
+    #destinationprecise {
+        height: 80%;
+    }
+
+    #userdestination {
+        height: 600px;
+    }
+
+    #formulairerecherche {
+        height: 54%;
+    }
+
+    #bestvente,
+    #bestventepays {
+        flex-wrap: wrap;
+    }
+
+    #bestvente article,
+    #bestventepays article {
+        width: 19%;
+
+    }
+
+    footer {
+        padding: 40px 6%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1400px) {
+
+    #formulairerecherche #titrelignedepartarrive,
+    #titrelignedatevoyageur,
+    #lignedatevoyageur,
+    #lignedepartarrive {
+        width: 92%;
+    }
+
+    #titreformulaire {
+        width: 25%;
+    }
+
+    #userdestination h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    #lignerecherche {
+        width: 38%;
+        margin-top: 10px;
+
+    }
+
+    #historiqueparts div {
+        width: 32%;
+    }
+
+    iframe {
+        height: 430px;
+    }
+
+    #lignedepartarrive #garededepart,
+    #lignedepartarrive #garedarrivee {
+        margin-bottom: 5px;
+    }
+
+    #destinationprecise {
+        height: 90%;
+    }
+
+    #formulairerecherche {
+        height: 50%;
+    }
+
+    #userdestination {
+        height: 550px;
+    }
+
+    #bestvente article,
+    #bestventepays article {
+        width: 28%;
+
+    }
+
+    footer {
+        padding: 40px 5%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+
+    #userdestination {
+        height: 500px;
+    }
+
+    #bestvente article,
+    #bestventepays article {
+        width: 30%;
+
+    }
+
+    footer {
+        padding: 40px 4%;
+    }
+    
+
+}
+@media screen and (min-width: 0px) and (max-width: 980px) {
+
+    #userdestination {
+        height: 500px;
+    }
+
+    #bestvente article,
+    #bestventepays article {
+        width: 45%;
+
+    }
+
+    footer {
+        padding: 40px 4%;
+
+    }
+    footer p{
+        font-size: 15px;
+    }
+    footer #last{
+        display: none;
+    }
+    footer #general {
+        max-width: 200px;
+    }
+    #preuve {
+        flex-direction: column;
+    }
+    #preuve article{
+        width: 95%;
+    }
+    #pourquoinous h2{
+        font-size: 40px;
+    }
+    #pourquoinous article h3{
+        font-size: 30px;
+    }
+    #pourquoinous article p{
+        font-size: 25px;
+    }
+}
+
+/* @media screen and (min-width: 0px) and (max-width: 1000px) {
+
+    iframe {
+        display: none;
+    }
+
+    #bestvente article,
+    #bestventepays article {
+        width: 40%;
+
+    }
+
+    footer {
+        padding: 40px 50px;
+    }
+
+    #last {
+        display: none;
+    }
+
+} */
+
+/* @media screen and (min-width: 0px) and (max-width: 900px) {
+
+    footer #general {
+        max-width: 200px;
+    }
+
+    #preuve {
+        flex-direction: column;
+    }
+    
+} */
